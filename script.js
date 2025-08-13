@@ -21,7 +21,7 @@ const rulesBtn = document.getElementById("rules-btn");
 const rulesModal = document.getElementById("rules-modal");
 const closeModalBtn = document.getElementById("close-modal");
 
-const options = ["rock", "paper", "scissors"];
+const options = ["rock", "paper", "scissors", "lizard", "spock"];
 
 choices.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -71,12 +71,17 @@ function showResult(playerChoice, houseChoice) {
 
 function getWinner(p, h) {
   if (p === h) return "draw";
+
   if (
-    (p === "rock" && h === "scissors") ||
-    (p === "paper" && h === "rock") ||
-    (p === "scissors" && h === "paper")
-  )
+    (p === "rock" && (h === "scissors" || h === "lizard")) ||
+    (p === "paper" && (h === "rock" || h === "spock")) ||
+    (p === "scissors" && (h === "paper" || h === "lizard")) ||
+    (p === "lizard" && (h === "spock" || h === "paper")) ||
+    (p === "spock" && (h === "scissors" || h === "rock"))
+  ) {
     return "win";
+  }
+
   return "lose";
 }
 

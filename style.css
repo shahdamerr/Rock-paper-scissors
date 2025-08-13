@@ -79,6 +79,14 @@ body {
   border-color: hsl(349, 71%, 52%);
   background-image: url("images/icon-rock.svg");
 }
+.choice.lizard {
+  border-color: hsl(261, 73%, 60%);
+  background-image: url("images/icon-lizard.svg");
+}
+.choice.spock {
+  border-color: hsl(189, 59%, 53%);
+  background-image: url("images/icon-spock.svg");
+}
 
 .choice:hover {
   transform: scale(1.1);
