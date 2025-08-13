@@ -168,16 +168,18 @@ button {
   background: white;
   color: hsl(229, 25%, 31%);
   padding: 2rem;
+  padding-top: 1rem;
   border-radius: 10px;
   text-align: center;
-  max-width: 300px;
 }
 .modal-content h2 {
   font-weight: 700;
 }
-
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
 .modal-content button {
-  margin-top: 1rem;
   background: none;
   border: none;
   font-weight: 600;
