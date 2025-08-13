@@ -60,7 +60,9 @@ function showResult(playerChoice, houseChoice) {
     score++;
   } else if (outcome === "lose") {
     resultText.textContent = "YOU LOSE";
-    score--;
+    if (score > 0) {
+      score--;
+    }
   } else {
     resultText.textContent = "DRAW";
   }
